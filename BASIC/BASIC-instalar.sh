@@ -29,7 +29,7 @@ function instalar-apache() {
 }
 
 function instalar-mysql() {
-sudo apt-get install mysql-server mysql-client -y 
+sudo apt-get install mysql-server mysql-client -y &> $s_null 
 }
 
 function instalar-phpmyadmin() {
@@ -50,6 +50,16 @@ function instalar-prestashop(){
   sudo systemctl restart apache2 &> $s_null 
 }
 
+function instalar-wordpress(){
+  wget https://es.wordpress.org/latest-es_ES.tar.gz &> $s_null 
+  sudo tar xf latest-es_ES.tar.gz -C /var/www/html/ &> $s_null 
+  sudo chown -R www-data:www-data /var/www/html/wordpress/ &> $s_null 
+  sudo cp ficheros/wordpress.conf /etc/apache2/sites-available/wordpress.conf &> $s_null 
+  sudo a2ensite wordpress.conf &> $s_null 
+  sudo systemctl restart apache2 &> $s_null 
+
+}
+
 
 
 #### FUNCIÓN PRINCIPAL
@@ -57,7 +67,7 @@ function instalar-prestashop(){
 function instalar-basic(){
 
   # Variables.
-  let total=5
+  let total=7
   let actual=1
   current_user=$(whoami)
 
@@ -118,6 +128,13 @@ function instalar-basic(){
   echo "   Instalando Prestashop..."
   echo
   instalar-prestashop
+
+  # Tarea 7
+  let "actual += 1"
+  echo "-> Tarea: "$actual/$total
+  echo "   Instalando Wordpress..."
+  echo
+  instalar-wordpress
 
 
   # Cuando la instalación termina
