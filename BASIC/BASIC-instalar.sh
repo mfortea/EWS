@@ -6,7 +6,7 @@ defecto='\033[0m'
 rojo='\033[0;31m'          
 verde='\033[0;32m'        
 amarillo='\033[0;33m'     
-morado='\033[0;35m'       
+morado='\033[1;35m'       
 cyan='\033[0;36m'        
 
 
