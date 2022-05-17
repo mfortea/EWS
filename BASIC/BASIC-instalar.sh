@@ -29,11 +29,11 @@ function instalar-apache() {
 }
 
 function instalar-mysql() {
-sudo apt-get install mysql-server mysql-client libmysqlclient15.dev -y &> $s_null 
+sudo apt-get install mysql-server mysql-client libmysqlclient15.dev -y 
 }
 
 function instalar-phpmyadmin() {
-  sudo apt-get install phpmyadmin -y &> $s_null 
+  sudo apt-get install phpmyadmin -y 
   sudo apt-get install apache2 libapache2-mod-php5 php5 mysql-server php-pear php5-mysql mysql-client mysql-server php5-mysql php5-gd -y &> $s_null 
 }
 
