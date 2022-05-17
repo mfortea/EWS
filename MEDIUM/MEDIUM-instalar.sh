@@ -61,7 +61,9 @@ function instalar-wordpress(){
 }
 
 function instalar-odoo(){
+  echo
   echo "Aqui va la instalación de Odoo"
+  echo
 }
 
 
@@ -72,8 +74,6 @@ function instalar-moodle(){
   sudo chown -R www-data: /var/www/html/moodle/ &> $s_null
   sudo mkdir /var/www/moodledata &> $s_null
   sudo chown www-data: /var/www/moodledata/ &> $s_null
-
-
 }
 
 
@@ -83,7 +83,7 @@ function instalar-moodle(){
 function instalar-basic(){
 
   # Variables.
-  let total=7
+  let total=9
   let actual=1
   current_user=$(whoami)
 
