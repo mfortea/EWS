@@ -27,13 +27,13 @@ El script instalará todo lo necesario automática, solo se le requerirá intera
 Si deseamos crear un usuario para mySQL para cada servicio, debemos seguir los pasos siguientes desde la consola de mySQL:
 
 ```console 
-mysql -u root -p
+sudo mysql -u root -p
 ```
 ```sql
 > create database MI_BASE_DE_DATOS charset utf8mb4 collate utf8mb4_unicode_ci;
 > create user MI_USUARIO@localhost identified by 'XXXXXXXX';
 > create user MI_USUARIO@localhost identified with mysql_native_password by 'XXXXXXXX';
-> grant all privileges on MI_BASE_DE_DATOS.* to MI_BASE_DE_DATOS@localhost;
+> grant all privileges on MI_BASE_DE_DATOS.* to MI_USUARIO@localhost;
 > exit
 ```
 
