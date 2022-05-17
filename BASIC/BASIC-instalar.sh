@@ -12,7 +12,7 @@ cyan='\033[0;36m'
 
 #### FUNCIONES DE INSTALACIONES
 function instalar-dependencias(){
-  sudo apt install figlet -y &> $s_null 
+  sudo apt install figlet unzip -y &> $s_null 
 }
 
 function update-y-upgrade() {
@@ -40,17 +40,12 @@ sudo apt-get install apache2 libapache2-mod-php5 php5 mysql-server php-pear php5
 
 function instalar-prestashop(){
 sudo wget https://download.prestashop.com/download/releases/prestashop_1.7.7.5.zip
+sudo unzip prestashop_1.7.7.5.zip -d /var/www/prestashop
 sudo chown -R www-data: /var/www/prestashop/
 sudo a2enmod rewrite
-prestashop_conf="Alias /tienda /var/www/prestashop
-<Directory /var/www/prestashop>
-        AllowOverride all
-        php_value memory_limit 512M
-</Directory>"
-sudo echo $prestashop_conf >> /etc/apache2/sites-available/prestashop.conf
+sudo cp ficheros/prestashop.conf /etc/apache2/sites-available/prestashop.conf
 sudo a2ensite prestashop.conf
 sudo systemctl restart apache2
-
 }
 
 
