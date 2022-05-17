@@ -66,7 +66,13 @@ function instalar-odoo(){
 
 
 function instalar-moodle(){
-  echo "Aqui va la instalación de Moodle"
+  sudo wget https://download.moodle.org/download.php/direct/stable400/moodle-latest-400.tgz &> $s_null
+  sudo tar xf moodle-latest-400.tgz -C /var/www/html/ &> $s_null
+  sudo chown -R www-data: /var/www/html/moodle/ &> $s_null
+  sudo mkdir /var/www/moodledata &> $s_null
+  sudo chown www-data: /var/www/moodledata/ &> $s_null
+
+
 }
 
 
@@ -84,7 +90,7 @@ function instalar-basic(){
   echo "================================================================================"
   echo -e "         PACK MEDIMUM de Easy Web Services (c) - Proceso de Instalación      "
   echo "--------------------------------------------------------------------------------"
-  echo "            Apache - PHP - MySQL - Prestashop - Wordpress - Odoo - Moodle       "
+  echo "          Apache - PHP - MySQL - Prestashop - Wordpress - Odoo - Moodle         "
   echo "================================================================================"
   echo -e "$defecto"
   echo "                ¡Gracias por adquirir el Pack Medium de EWS!"
