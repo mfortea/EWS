@@ -63,6 +63,7 @@ function instalar-basic(){
   echo -e "$defecto"
 
   # Cuando la instalación termina
+  clear
   figlet -c "EWS" 
   figlet -c "BASIC Pack"
   echo -e "$verde"
