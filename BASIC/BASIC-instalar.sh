@@ -1,48 +1,95 @@
 #! /bin/bash
 
+#### Variables globales
+s_null="/dev/null"
+defecto='\033[0m'      
+rojo='\033[0;31m'          
+verde='\033[0;32m'        
+amarillo='\033[0;33m'     
+morado='\033[0;35m'       
+cyan='\033[0;36m'        
+
+
+#### FUNCIONES DE INSTALACIONES
+function instalar-dependencias(){
+  sudo apt install figlet -y &> $s_null 
+}
+
+function update-y-upgrade() {
+  apt-get update -y &> $s_null 
+}
+
+#### FUNCIÓN PRINCIPAL
+
 function instalar-basic(){
+
   # Variables.
-  let proc=2
-  s_null="/dev/null"
+  let total=2
+  let actual=1
   current_user=$(whoami)
-  # Texto de introducción.
+
+  echo -e "$cyan"
   echo "================================================================================"
-  echo -e "      PACK BASIC de Easy Web Services - Proceso de Instalación"
+  echo -e "         PACK BASIC de Easy Web Services (c) - Proceso de Instalación        "
+  echo "--------------------------------------------------------------------------------"
+  echo "                  Apache - PHP - MySQL - Prestashop - Wordpress                 "
   echo "================================================================================"
-  # Indicamos al usuario que comenzamos las tareas.
+  echo -e "$defecto"
+  echo "                ¡Gracias por adquirir el Pack Basic de EWS!"
   echo
-  echo "[Realizando tareas, espere un momento por favor (No cierre la terminal)...]"
   echo
-  echo "Procesos restantes: "$proc
-  # Tareas.
-  #
-  sudo apt install figlet -y &> $s_null #
-  let "proc -= 1"
-  echo "Procesos restantes: "$proc
-  #
-  apt-get update -y &> $s_null #
-  let "proc -= 1"
-  echo "Procesos restantes: "$proc
-  # Indicamos al usuario que hemos finalizado las tareas.
+
+
+  #### TAREAS
+
+  echo "Instalando Pack Basic ..."
+  echo -e "$morado"
+
+  # Tarea 1
+  echo "-> Tarea: "$actual/$total
+  echo "   Actualizando los repositorios..."
+  echo
+  update-y-upgrade
+
+
+
+  # Tarea 2
+  let "actual += 1"
+  echo "-> Tarea: "$actual/$total
+  echo "   Instalando dependencias..."
+  echo
+  instalar-dependencias
+
+  echo -e "$defecto"
+
+  # Cuando la instalación termina
   figlet -c "EWS" 
   figlet -c "BASIC Pack"
+  echo -e "$verde"
+  echo "           ***** LA INSTALACIÓN HA FINALIZADO CORRECTAMENTE *****              "
+  echo -e "$defecto"
+  echo "        [!] Siga las instrucciones del fichero README para continuar           "
   echo
-  echo "[Tareas finalizadas con éxito]"
-  echo
-  # Liberamos Variables.
-  proc=
+
+
+  # Liberamos Variables
+  total=
+  actual=
   s_null=
   current_user=
 }
-# Limpiamos terminal de comandos ejecutados anteriormente.
+
+
+#### INICIO DEL SCRIPT
 clear
-# Comprobamos que el fichero Bash ha sido ejecutado como SuperUsuario - root.
+
+# Comprobamos que somos root
 if [ "$(id -u)" != "0" ]; then
-   echo
+   echo -e "$rojo"
    echo "============================================================================"
-   echo "DEBE EJECUTAR EL SCRIPT COMO SUPERUSUARIO" 1>&2
+   echo "               [!] DEBE EJECUTAR EL SCRIPT COMO SUPERUSUARIO"
    echo "============================================================================"
-   echo
+   echo -e "$defecto"
     exit 1
 else
   instalar-basic
