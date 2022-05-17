@@ -80,11 +80,11 @@ su - "odoo14" <<SHT
   deactivate
   mkdir /opt/odoo14/odoo-custom-addons
 SHT
-exit
 sudo cp ficheros/odoo14.conf /etc/odoo14.conf
 sudo cp ficheros/odoo14.service /etc/systemd/system/odoo14.service
 sudo systemctl daemon-reload
 sudo systemctl enable --now odoo14
+sudo service odoo14 restart
 }
 
 
