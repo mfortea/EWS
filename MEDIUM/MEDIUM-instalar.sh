@@ -66,6 +66,7 @@ function instalar-odoo(){
 
 
 function instalar-moodle(){
+  sudo apt install -y php-curl php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc php-zip &> $s_null
   sudo wget https://download.moodle.org/download.php/direct/stable400/moodle-latest-400.tgz &> $s_null
   sudo tar xf moodle-latest-400.tgz -C /var/www/html/ &> $s_null
   sudo chown -R www-data: /var/www/html/moodle/ &> $s_null
