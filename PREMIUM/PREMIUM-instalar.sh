@@ -71,15 +71,16 @@ sudo su - postgres -c "createuser -s odoo14" &> $s_null
 sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb &> $s_null 
 sudo apt install -y./wkhtmltox_0.12.5-1.bionic_amd64.deb &> $s_null 
 su - "odoo14" <<SHT
-  git clone https://www.github.com/odoo/odoo --depth 1 --branch 14.0 /opt/odoo14/odoo &> $s_null 
-  cd /opt/odoo14 &> $s_null 
-  python3 -m venv odoo-venv &> $s_null 
-  source odoo-venv/bin/activate &> $s_null 
-  pip3 install wheel &> $s_null 
-  pip3 install -r odoo/requirements.txt &> $s_null 
-  deactivate &> $s_null 
-  mkdir /opt/odoo14/odoo-custom-addons &> $s_null 
+  git clone https://www.github.com/odoo/odoo --depth 1 --branch 14.0 /opt/odoo14/odoo
+  cd /opt/odoo14
+  python3 -m venv odoo-venv 
+  source odoo-venv/bin/activate
+  pip3 install wheel
+  pip3 install -r odoo/requirements.txt 
+  deactivate
+  mkdir /opt/odoo14/odoo-custom-addons
 SHT
+clear
 sudo cp ficheros/odoo14.conf /etc/odoo14.conf &> $s_null 
 sudo cp ficheros/odoo14.service /etc/systemd/system/odoo14.service &> $s_null 
 sudo systemctl daemon-reload &> $s_null 
