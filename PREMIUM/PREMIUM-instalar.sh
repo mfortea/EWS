@@ -99,11 +99,11 @@ function instalar-moodle(){
 }
 
 function instalar-asterisk(){
-
+  echo "Aquí va la instalación de Asterisk"
 }
 
 function instalar-vpn() {
-
+  echo "Aquí va la instalación de la VPN"
 }
 
 
