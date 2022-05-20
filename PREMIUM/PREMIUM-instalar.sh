@@ -97,6 +97,13 @@ function instalar-moodle(){
   sudo chown www-data: /var/www/moodledata/ &> $s_null
 }
 
+function instalar-asterisk(){
+
+}
+
+function instalar-vpn() {
+
+}
 
 
 #### FUNCIÓN PRINCIPAL
@@ -187,6 +194,19 @@ function instalar-basic(){
   echo
   instalar-moodle
 
+  # Tarea 10
+  let "actual += 1"
+  echo "-> Tarea: "$actual/$total
+  echo "   Instalando Asterisk..."
+  echo
+  instalar-asterisk
+
+  # Tarea 11
+  let "actual += 1"
+  echo "-> Tarea: "$actual/$total
+  echo "   Instalando la VPN..."
+  echo
+  instalar-vpn
 
   # Cuando la instalación termina
   echo -e "$defecto"
