@@ -1,7 +1,7 @@
 # Pack Medium - Easy Web Services
 
 
-Este script ha sido testado correctamente en Ubuntu 20.04 y Ubuntu 18.04.
+Este script ha sido testado correctamente en Ubuntu 18.04. Queda pendiente probar su compatibilidad con Ubuntu 20.04
 
 Este script instala lo siguiente:
 - **Servidor Web Apache**
