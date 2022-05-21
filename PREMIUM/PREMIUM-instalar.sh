@@ -140,18 +140,12 @@ function instalar-asterisk(){
   clear
 }
 
-function instalar-vpn() {
-  echo "Aquí va la instalación de la VPN"
-
-}
-
-
 #### FUNCIÓN PRINCIPAL
 
 function instalar-basic(){
 
   # Variables.
-  let total=11
+  let total=10
   let actual=1
   current_user=$(whoami)
 
@@ -240,13 +234,6 @@ function instalar-basic(){
   echo "   Instalando Asterisk..."
   echo
   instalar-asterisk
-
-  # Tarea 11
-  let "actual += 1"
-  echo "-> Tarea: "$actual/$total
-  echo "   Instalando la VPN..."
-  echo
-  instalar-vpn
 
   # Cuando la instalación termina
   echo -e "$defecto"
