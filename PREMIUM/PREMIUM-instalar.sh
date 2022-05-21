@@ -137,6 +137,7 @@ function instalar-asterisk(){
   sudo systemctl enable asterisk 
   cp -r ficheros/asterisk_click2dial /opt/odoo14/odoo/addons/asterisk_click2dial 
   cp -r ficheros/base_phone /opt/odoo14/odoo/addons/base_phone 
+  clear
 }
 
 function instalar-vpn() {
@@ -150,7 +151,7 @@ function instalar-vpn() {
 function instalar-basic(){
 
   # Variables.
-  let total=9
+  let total=11
   let actual=1
   current_user=$(whoami)
 
