@@ -11,4 +11,3 @@
 | Prestashop              | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
 | Wordpress               | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
 | Moodle                  |          -         | :white_check_mark: | :white_check_mark: | 
-| Servicio VPN            |          -         |          -         | :white_check_mark: | 
