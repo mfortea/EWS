@@ -1,5 +1,4 @@
 # Pack PREMIUM - Easy Web Services
-# Pack Medium - Easy Web Services
 
 Este script ha sido testado correctamente en Ubuntu 18.04. Queda pendiente probar su compatibilidad con Ubuntu 20.04
 
