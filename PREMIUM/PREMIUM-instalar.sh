@@ -113,7 +113,6 @@ function instalar-asterisk(){
   sudo tar zxf asterisk-18.3.0.tar.gz &> $s_null 
   cd asterisk-18.3.0 &> $s_null 
   sudo contrib/scripts/get_mp3_source.sh
-  clear
   sudo contrib/scripts/install_prereq install &> $s_null 
   sudo ./configure --with-pjproject --without-ssl --without-srtp &> $s_null 
   sudo make &> $s_null 
