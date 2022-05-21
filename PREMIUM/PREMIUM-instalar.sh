@@ -99,44 +99,44 @@ function instalar-moodle(){
 }
 
 function instalar-asterisk(){
-  sudo apt install wget build-essential subversion &> $s_null 
-  sudo apt-get install wget build-essential subversion &> $s_null 
-  cd /usr/local/src/ &> $s_null 
-  sudo wget https://github.com/cisco/libsrtp/archive/refs/tags/v2.4.2.zip &> $s_null 
-  sudo unzip v2.4.2.zip &> $s_null 
-  cd /usr/local/src/libsrtp-2.4.2 &> $s_null 
-  sudo ./configure CFLAGS=-fPIC --prefix=/usr/local/lib &> $s_null 
-  sudo make &> $s_null 
-  sudo make install &> $s_null 
-  cd /usr/src/ &> $s_null 
-  sudo wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-18.3.0.tar.gz &> $s_null 
-  sudo tar zxf asterisk-18.3.0.tar.gz &> $s_null 
-  cd asterisk-18.3.0 &> $s_null 
+  sudo apt install wget build-essential subversion 
+  sudo apt-get install wget build-essential subversion 
+  cd /usr/local/src/ 
+  sudo wget https://github.com/cisco/libsrtp/archive/refs/tags/v2.4.2.zip 
+  sudo unzip v2.4.2.zip 
+  cd /usr/local/src/libsrtp-2.4.2 
+  sudo ./configure CFLAGS=-fPIC --prefix=/usr/local/lib 
+  sudo make 
+  sudo make install  
+  cd /usr/src/ 
+  sudo wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-18.3.0.tar.gz 
+  sudo tar zxf asterisk-18.3.0.tar.gz 
+  cd asterisk-18.3.0 
   sudo contrib/scripts/get_mp3_source.sh
-  sudo contrib/scripts/install_prereq install &> $s_null 
-  sudo ./configure --with-pjproject --without-ssl --without-srtp &> $s_null 
+  sudo contrib/scripts/install_prereq install 
+  sudo ./configure --with-pjproject --without-ssl --without-srtp
   sudo make 
   sudo make install 
-  sudo mkdir /etc/asterisk/keys &> $s_null 
-  cd contrib/scripts &> $s_null 
+  sudo mkdir /etc/asterisk/keys 
+  cd contrib/scripts 
   clear
   echo "Introduce una frase para la creación del certificado:"
   sudo ./ast_tls_cert -C web.es -O “Mi Empresa” -d /etc/asterisk/keys
   clear
   cd ..
   cd ..
-  sudo make basic-pbx &> $s_null 
-  sudo make config &> $s_null 
-  sudo ldconfig &> $s_null 
-  sudo adduser --system --group --home /var/lib/asterisk --no-create-home --gecos "Asterisk PBX" asterisk &> $s_null 
-  sudo cp ficheros/asterisk /etc/default/asterisk &> $s_null 
-  sudo usermod -a -G dialout,audio asterisk &> $s_null 
-  sudo chown -R asterisk: /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk &> $s_null 
-  sudo chmod -R 750 /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk &> $s_null 
-  sudo systemctl start asterisk &> $s_null 
-  sudo systemctl enable asterisk &> $s_null 
-  cp -r ficheros/asterisk_click2dial /opt/odoo14/odoo/addons/asterisk_click2dial &> $s_null 
-  cp -r ficheros/base_phone /opt/odoo14/odoo/addons/base_phone &> $s_null 
+  sudo make basic-pbx  
+  sudo make config 
+  sudo ldconfig 
+  sudo adduser --system --group --home /var/lib/asterisk --no-create-home --gecos "Asterisk PBX" asterisk 
+  sudo cp ficheros/asterisk /etc/default/asterisk 
+  sudo usermod -a -G dialout,audio asterisk 
+  sudo chown -R asterisk: /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk 
+  sudo chmod -R 750 /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk 
+  sudo systemctl start asterisk 
+  sudo systemctl enable asterisk 
+  cp -r ficheros/asterisk_click2dial /opt/odoo14/odoo/addons/asterisk_click2dial 
+  cp -r ficheros/base_phone /opt/odoo14/odoo/addons/base_phone 
 }
 
 function instalar-vpn() {
