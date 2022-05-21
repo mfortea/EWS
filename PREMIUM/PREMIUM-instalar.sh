@@ -115,8 +115,8 @@ function instalar-asterisk(){
   sudo contrib/scripts/get_mp3_source.sh
   sudo contrib/scripts/install_prereq install &> $s_null 
   sudo ./configure --with-pjproject --without-ssl --without-srtp &> $s_null 
-  sudo make &> $s_null 
-  sudo make install &> $s_null 
+  sudo make 
+  sudo make install 
   sudo mkdir /etc/asterisk/keys &> $s_null 
   cd contrib/scripts &> $s_null 
   clear
