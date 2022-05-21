@@ -135,8 +135,8 @@ function instalar-asterisk(){
   sudo chmod -R 750 /var/{lib,log,run,spool}/asterisk /usr/lib/asterisk /etc/asterisk 
   sudo systemctl start asterisk 
   sudo systemctl enable asterisk 
-  cp -r ficheros/asterisk_click2dial /opt/odoo14/odoo/addons/asterisk_click2dial 
-  cp -r ficheros/base_phone /opt/odoo14/odoo/addons/base_phone 
+  sudo cp -r ficheros/asterisk_click2dial /opt/odoo14/odoo/addons/asterisk_click2dial 
+  sudo cp -r ficheros/base_phone /opt/odoo14/odoo/addons/base_phone 
   clear
 }
 
