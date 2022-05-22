@@ -151,9 +151,9 @@ function instalar-basic(){
 
   echo -e "$cyan"
   echo "================================================================================"
-  echo -e "     PACK PREMIUM de Easy Web Services (c) - Proceso de Instalación          "
+  echo -e "       PACK PREMIUM de Easy Web Services (c) - Proceso de Instalación        "
   echo "--------------------------------------------------------------------------------"
-  echo " Apache - PHP - MySQL - Prestashop - Wordpress - Odoo - Moodle - Asterisk - VPN "
+  echo "    Apache - PHP - MySQL - Prestashop - Wordpress - Odoo - Moodle - Asterisk    "
   echo "================================================================================"
   echo -e "$defecto"
   echo "                ¡Gracias por adquirir el Pack Medium de EWS!"
