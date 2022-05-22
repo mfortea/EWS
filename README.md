@@ -1,7 +1,7 @@
 # Scripts de EWS
 
 
-|   Software includido    |    BASIC           |       MEDIUM       |   PREMIUM          |
+|   Software incluído     |    BASIC           |       MEDIUM       |   PREMIUM          |
 |:-----------------------:|:------------------:|:------------------:|:------------------:|
 | Apache                  | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
 | mySQL                   | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
