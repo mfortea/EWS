@@ -13,6 +13,8 @@ Este script instala lo siguiente:
 ## Instalar
 Para ejecutar el script, deberá disponer de permisos de superusuario y ejecutar la orden:
 
+``sudo chmod +x BASIC-instalar.sh``
+
 `` sudo ./BASIC-instalar.sh ``
 
 El script instalará todo lo necesario automática, solo se le requerirá interacción al usuario durante la instalación de PHPmyAdmin, para establecer las credenciales que deseemos.
