@@ -19,7 +19,7 @@ Para ejecutar el script, deberá disponer de permisos de superusuario y ejecutar
 
 `` sudo ./BASIC-instalar.sh ``
 
-El script instalará todo lo necesario automática, solo se le requerirá interacción al usuario durante la instalación de PHPmyAdmin, para establecer las credenciales que deseemos y durante la instalación de Asterisk para establecer el prefijo utilizado en el país y para la creación de una frase secreta que será usada en el certificado de Asterisk.
+El script instalará todo lo necesario de forma automática, solo se le requerirá interacción al usuario durante la instalación de PHPmyAdmin, para establecer las credenciales que deseemos y durante la instalación de Asterisk para establecer el prefijo utilizado en el país y para la creación de una frase secreta que será usada en el certificado de Asterisk.
 
 ## Una vez instalado el script
 - **Apache** sirve por defecto en http://localhost:80
