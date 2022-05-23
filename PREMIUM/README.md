@@ -17,7 +17,9 @@ Este script instala lo siguiente:
 ## Instalar
 Para ejecutar el script, deberá disponer de permisos de superusuario y ejecutar la orden:
 
-`` sudo ./BASIC-instalar.sh ``
+``sudo chmod +x PREMIUM-instalar.sh``
+
+`` sudo ./PREMIUM-instalar.sh ``
 
 El script instalará todo lo necesario de forma automática, solo se le requerirá interacción al usuario durante la instalación de PHPmyAdmin, para establecer las credenciales que deseemos y durante la instalación de Asterisk para establecer el prefijo utilizado en el país y para la creación de una frase secreta que será usada en el certificado de Asterisk.
 
