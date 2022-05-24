@@ -2,7 +2,7 @@
 
 <img src="assets/logo.png" width="200"/>
 
-Estos scripts ha sido desarrollados para la empresa ficticia EWS, de la asignatura de Sistemas de Información, para el 2º curso de Ingeniería Informática de la UCO.
+Estos scripts han sido desarrollados para la empresa ficticia EWS, de la asignatura de Sistemas de Información, para el 2º curso de Ingeniería Informática de la UCO.
 
 Simulan tres diferentes packs de scripts que se venden y que ofrecen diferentes servicios. Los tres scripts son totalmente funcionales, y han sido testados tanto en Ubuntu Server 20.04 como en Ubuntu Server 18.04, asegurándose la máxima compatibilidad en éste último.
 
