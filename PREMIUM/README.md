@@ -1,5 +1,7 @@
 # Pack PREMIUM - Easy Web Services
 
+<img src="../assets/PREMIUM.png" width="180"/>
+
 Este script ha sido testado correctamente en Ubuntu 18.04. Queda pendiente probar su compatibilidad con Ubuntu 20.04
 
 Este script instala lo siguiente:
