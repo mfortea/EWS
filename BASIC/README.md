@@ -1,5 +1,7 @@
 # Pack BASIC - Easy Web Services
 
+<img src="../assets/BASIC.png" width="180"/>
+
 Este script ha sido testado correctamente en Ubuntu 20.04 y Ubuntu 18.04.
 
 Este script instala lo siguiente:
