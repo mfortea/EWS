@@ -56,5 +56,6 @@ Para poder iniciar Odoo una vez instalado, es necesario cambiar manualmente la c
 
 El script añade a la carpeta de addons de Odoo el módulo Click2Dial junto a Base phone (módulo base necesario), estos módulos deben ser instalados más adelante en nuestro Odoo una vez que se haya configurado.
 
-
+## Licencia
+El contenido de este repositorio está sujeto bajo una licencia [Boost Software License 1.0](../LICENSE)
 
