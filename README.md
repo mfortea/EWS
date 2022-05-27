@@ -34,3 +34,7 @@ Puede acceder a los diferentes packs desde aquí
 [BASIC]: /BASIC
 [MEDIUM]: /MEDIUM
 [PREMIUM]: /PREMIUM
+
+
+## Licencia
+El contenido de este repositorio está sujeto bajo una licencia [Boost Software License 1.0](LICENSE)
