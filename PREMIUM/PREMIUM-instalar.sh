@@ -1,5 +1,10 @@
 #! /bin/bash
 
+#############################  LICENSE NOTICE  ############@@##################
+#### mfortea/EWS repository is licensed under the Boost Software License 1.0 ##
+#### Author: @mfortea #########################################################
+###############################################################################
+
 #### Variables globales
 s_null="/dev/null"
 defecto='\033[0m'      
