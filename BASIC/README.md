@@ -42,3 +42,6 @@ sudo mysql -u root -p
 ```
 
 Una vez hecho esto, ya solo es necesario indicar la base de datos y las credenciales que deseemos para cada servicio instalado (Prestashop, Wordpress...)
+
+## Licencia
+El contenido de este repositorio está sujeto bajo una licencia [Boost Software License 1.0](../LICENSE)
