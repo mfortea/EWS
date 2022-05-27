@@ -51,5 +51,6 @@ Una vez hecho esto, ya solo es necesario indicar la base de datos y las credenci
 ### Odoo
 Para poder iniciar Odoo una vez instalado, es necesario cambiar manualmente la contraseña establecida en ``` /etc/odoo14.conf```, esta contraseña usada para la base de datos "odoo" será también "odoo" por defecto.
 
-
+## Licencia
+El contenido de este repositorio está sujeto bajo una licencia [Boost Software License 1.0](../LICENSE)
 
