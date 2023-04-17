@@ -26,7 +26,7 @@ function update-y-upgrade() {
 
 function instalar-apache() {
   sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert -y &> $s_null 
-  sudo apt-get install libapache2-mod-php5 php5 php5-common php5-curl php5-dev php5-gd php5-idn php-pear php5-imagick php5-mcrypt php5-mysql php5-ps php5-pspell php5-recode php5-xsl -y &> $s_null 
+  sudo apt-get install libapache2-mod-php php php-common php-curl php-dev php-gd php-idn php-pear php-imagick php-mcrypt php-mysql php-ps php-pspell php-recode php-xsl -y &> $s_null 
   sudo chown -R www-data:www-data /var/ww &> $s_null 
   sudo a2enmod rewrite &> $s_null 
   sudo php5enmod mcrypt &> $s_null 
@@ -39,15 +39,15 @@ sudo apt-get install mysql-server mysql-client -y &> $s_null
 
 function instalar-phpmyadmin() {
   sudo apt-get install phpmyadmin -y 
-  sudo apt-get install apache2 libapache2-mod-php5 php5 mysql-server php-pear php5-mysql mysql-client mysql-server php5-mysql php5-gd -y &> $s_null 
+  sudo apt-get install apache2 libapache2-mod-php php mysql-server php-pear php-mysql mysql-client mysql-server php-mysql php-gd -y &> $s_null 
   clear
 }
 
 function instalar-prestashop(){
   sudo apt install php-intl -y &> $s_null 
   sudo cp ficheros/php.ini /etc/php/7.4/cli/php.ini &> $s_null 
-  sudo wget https://download.prestashop.com/download/releases/prestashop_1.7.7.5.zip &> $s_null 
-  sudo unzip prestashop_1.7.7.5.zip -d /var/www/prestashop &> $s_null 
+  sudo wget https://download.prestashop.com/download/releases/prestashop_1.7.7.8.zip &> $s_null 
+  sudo unzip prestashop_1.7.7.8.zip -d /var/www/prestashop &> $s_null 
   sudo chown -R www-data: /var/www/prestashop/ &> $s_null 
   sudo a2enmod rewrite &> $s_null 
   sudo cp ficheros/prestashop.conf /etc/apache2/sites-available/prestashop.conf &> $s_null 
